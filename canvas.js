@@ -131,4 +131,21 @@ window.addEventListener("load", () => {
         if(tool == 1) draw(e)
         if(tool == 2) erase(e)
     })
+
+    //Celular
+
+    canvas.addEventListener("touchend", function(e) {
+        if(tool == 1) startDrawing(e)
+        if(tool == 2) startErasing(e)
+    })
+
+    canvas.addEventListener("touchstart", function() {
+        if(tool == 1) stopDrawing()
+        if(tool == 2) stopErasing()
+    })
+
+    canvas.addEventListener("touchmove", function(e) {
+        if(tool == 1) draw(e)
+        if(tool == 2) erase(e)
+    })
 })
