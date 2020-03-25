@@ -134,12 +134,12 @@ window.addEventListener("load", () => {
 
     //Celular
 
-    canvas.addEventListener("touchend", function(e) {
+    canvas.addEventListener("touchstart", function(e) {
         if(tool == 1) startDrawing(e)
         if(tool == 2) startErasing(e)
     })
 
-    canvas.addEventListener("touchstart", function() {
+    canvas.addEventListener("touchend", function() {
         if(tool == 1) stopDrawing()
         if(tool == 2) stopErasing()
     })
